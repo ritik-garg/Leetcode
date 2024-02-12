@@ -1,8 +1,17 @@
-/**
- * 169. Majority Element
- * Time: 99.82%
- * Memory: 62.69%
+/*
+ * @lc app=leetcode id=169 lang=java
+ *
+ * [169] Majority Element
  */
+
+/**
+ * 
+ * 50/50 cases passed (2 ms)
+ * Your runtime beats 99.82 % of java submissions
+ * Your memory usage beats 62.69 % of java submissions (50.4 MB)
+ */
+
+// @lc code=start
 
 class Solution {
     public int majorityElement(int[] nums) {
@@ -16,3 +25,4 @@ class Solution {
         return e;
     }
 }
+// @lc code=end
