@@ -5,16 +5,12 @@
  */
 
 /*
-77/77 cases passed (2 ms)
-Your runtime beats 31.19 % of java submissions
-Your memory usage beats 30.96 % of java submissions (44.5 MB)
+77/77 cases passed (0 ms)
+Your runtime beats 100 % of java submissions
+Your memory usage beats 78.06 % of java submissions (43.3 MB)
  */
 
 // @lc code=start
-
-import java.util.LinkedList;
-import java.util.Queue;
-
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -30,6 +26,34 @@ import java.util.Queue;
  *     }
  * }
  */
+class Solution {
+    int leftMostNode = 0;
+    int leftMostDepth = -1;
+
+    private void dfs(TreeNode root, int depth) {
+        if (root == null) return;
+        if (depth > leftMostDepth) {
+            leftMostDepth = depth;
+            leftMostNode = root.val;
+        }
+        dfs(root.left, depth + 1);
+        dfs(root.right, depth + 1);
+    }
+
+    public int findBottomLeftValue(TreeNode root) {
+        dfs(root, 0);
+        return leftMostNode;
+    }
+}
+// @lc code=end
+
+/*
+BFS Method using queue
+
+77/77 cases passed (2 ms)
+Your runtime beats 31.19 % of java submissions
+Your memory usage beats 30.96 % of java submissions (44.5 MB)
+
 class Solution {
     public int findBottomLeftValue(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
@@ -52,5 +76,4 @@ class Solution {
         return 0;
     }
 }
-// @lc code=end
-
+ */
