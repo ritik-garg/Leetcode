@@ -1,3 +1,16 @@
+/*
+ * @lc app=leetcode id=2540 lang=java
+ *
+ * [2540] Minimum Common Value
+ */
+
+/*
+41/41 cases passed (2 ms)
+Your runtime beats 81.02 % of java submissions
+Your memory usage beats 91.93 % of java submissions (62.2 MB)
+ */
+
+// @lc code=start
 class Solution {
     public int getCommon(int[] nums1, int[] nums2) {
         int n1 = 0, n2 = 0;
@@ -9,3 +22,4 @@ class Solution {
         return -1;
     }
 }
+// @lc code=end

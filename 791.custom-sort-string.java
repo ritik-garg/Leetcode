@@ -1,3 +1,16 @@
+/*
+ * @lc app=leetcode id=791 lang=java
+ *
+ * [791] Custom Sort String
+ */
+
+/*
+41/41 cases passed (0 ms)
+Your runtime beats 100 % of java submissions
+Your memory usage beats 56.17 % of java submissions (41.5 MB)
+ */
+
+// @lc code=start
 class Solution {
     public String customSortString(String order, String s) {
         int[] freq = new int[26];
@@ -20,3 +33,4 @@ class Solution {
         return answer.toString();
     }
 }
+// @lc code=end

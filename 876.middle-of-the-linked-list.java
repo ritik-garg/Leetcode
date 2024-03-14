@@ -1,3 +1,16 @@
+/*
+ * @lc app=leetcode id=876 lang=java
+ *
+ * [876] Middle of the Linked List
+ */
+
+/*
+36/36 cases passed (0 ms)
+Your runtime beats 100 % of java submissions
+Your memory usage beats 87.62 % of java submissions (40.6 MB) 
+ */
+
+// @lc code=start
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -18,3 +31,4 @@ class Solution {
         return slow;
     }
 }
+// @lc code=end

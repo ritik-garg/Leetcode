@@ -1,3 +1,16 @@
+/*
+ * @lc app=leetcode id=349 lang=java
+ *
+ * [349] Intersection of Two Arrays
+ */
+
+/*
+56/56 cases passed (2 ms)
+Your runtime beats 93.47 % of java submissions
+Your memory usage beats 68.16 % of java submissions (43 MB)
+ */
+
+// @lc code=start
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,3 +31,4 @@ class Solution {
         return answer.stream().mapToInt(i -> i).toArray();
     }
 }
+// @lc code=end

@@ -1,3 +1,19 @@
+/*
+ * @lc app=leetcode id=1171 lang=java
+ *
+ * [1171] Remove Zero Sum Consecutive Nodes from Linked List
+ */
+
+/*
+105/105 cases passed (3 ms)
+Your runtime beats 64.81 % of java submissions
+Your memory usage beats 47.48 % of java submissions (44 MB)
+ */
+
+// @lc code=start
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -38,3 +54,5 @@ class Solution {
         return head;
     }
 }
+// @lc code=end
+

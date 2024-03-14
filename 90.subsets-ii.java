@@ -4,8 +4,13 @@
  * [90] Subsets II
  */
 
-// @lc code=start
+/*
+20/20 cases passed (1 ms)
+Your runtime beats 99.81 % of java submissions
+Your memory usage beats 84.76 % of java submissions (43.1 MB)
+ */
 
+// @lc code=start
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
