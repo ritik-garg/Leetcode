@@ -25,6 +25,32 @@ class Solution {
         }
     }
 }
+
+/**
+ * One pass solution
+
+class Solution {
+    public void sortColors(int[] nums) {
+        int a = 0, b = 0, c = nums.length - 1;
+        while (b <= c) {
+            if (nums[b] == 0) {
+                int t = nums[a];
+                nums[a] = 0;
+                nums[b] = t;
+                a++;
+                b++;
+            } else if (nums[b] == 2) {
+                int t = nums[c];
+                nums[c] = 2;
+                nums[b] = t;
+                c--;
+            } else b++;
+        }
+    }
+}
+ */
+
+
 // @lc code=end
 
 /**
