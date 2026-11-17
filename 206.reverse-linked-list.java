@@ -5,29 +5,35 @@
  */
 
 /*
- * 28/28 cases passed (0 ms)
- * Your runtime beats 100 % of java submissions
- * Your memory usage beats 67.88 % of java submissions (42.3 MB)
- */
+28/28 cases passed (0 ms)
+Your runtime beats 100 % of java submissions
+Your memory usage beats 91.28 % of java submissions (43.6 MB)
+*/
+
+// @lc code=start
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode p = head, n = head.next;
+        head.next = null;
+        while (n != null) {
+            ListNode t = n.next;
+            n.next = p;
+            p = n;
+            n = t;
+        }
+        return p;
+    }
+}
+// @lc code=end
 
 /*
+
 Recursive Method
 28/28 cases passed (0 ms)
 Your runtime beats 100 % of java submissions
 Your memory usage beats 84.62 % of java submissions (42.2 MB)
- */
 
-// @lc code=start
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
 class Solution {
     // public ListNode reverseList(ListNode head) {
     //     // Iterative Method
@@ -60,5 +66,4 @@ class Solution {
         return reverseListRecursive(next, head);
     }
 }
-// @lc code=end
-
+*/
