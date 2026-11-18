@@ -7,7 +7,7 @@
 /*
 208/208 cases passed (0 ms)
 Your runtime beats 100 % of java submissions
-Your memory usage beats 62.87 % of java submissions (41.5 MB)
+Your memory usage beats 79.58 % of java submissions (43 MB)
  */
 
 // @lc code=start
@@ -21,6 +21,26 @@ Your memory usage beats 62.87 % of java submissions (41.5 MB)
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode t = new ListNode(0, head);
+        ListNode s = t, f = t;
+        for (int i = 0; i < n; ++i) f = f.next;
+        while (f.next != null) {
+            s = s.next;
+            f = f.next;
+        }
+        s.next = s.next.next;
+        return t.next;
+    }
+}
+// @lc code=end
+
+/*
+208/208 cases passed (0 ms)
+Your runtime beats 100 % of java submissions
+Your memory usage beats 62.87 % of java submissions (41.5 MB)
+
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode right = head, left = head;
@@ -41,5 +61,4 @@ class Solution {
         return head;
     }
 }
-// @lc code=end
-
+*/
